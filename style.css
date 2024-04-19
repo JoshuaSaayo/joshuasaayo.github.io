@@ -610,6 +610,16 @@ footer h2 {
 
 
 @media screen and (max-width: 800px){
+    .preload-grid-data {
+        margin-top: 150px;
+        height: 80px;
+    }
+
+    .preload-grid-owioo {
+        margin-top: 230px;
+        height: 80px;
+    }
+    
     .header {
         padding: 0;
     }
