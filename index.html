@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data and ML Engineering</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="preload" id="preload">
+        <div class="opening-stripes" >
+            <div class="stripes blue"></div>
+            <div class="stripes green" id="stripes"></div>
+            <div class="stripes blue"></div>
+            <div class="stripes green"></div>
+            <div class="stripes blue"></div>
+            <div class="stripes green"></div>
+            <div class="stripes blue"></div>
+            <div class="stripes green"></div>
+            <div class="stripes blue"></div>
+        </div>
+    </div>
+    <div class="preload-grid-data ">
+        <div class="data-item white"></div>
+        <div class="data-item letter" id="letter-d"><img src="img/letter-d.png" alt="letter-d.png"></div>
+        <div class="data-item white"></div>
+        <div class="data-item letter" id="letter-a"><img src="img/letter-a.png" alt="letter-a.png"></div>
+        <div class="data-item white"></div>
+        <div class="data-item letter" id="letter-t"><img src="img/letter-t.png" alt="letter-t.png"></div>
+        <div class="data-item white"></div>
+        <div class="data-item letter" id="letter-a2"><img src="img/letter-a.png" alt="letter-a.png"></div>
+        <div class="data-item white"></div>
+    </div>
+    <div class="preload-grid-owioo fade-in">
+        <div class="owioo-item "><img src="img/letter-o.png" alt="letter-o.png"></div>
+        <div class="owioo-item  white"></div>
+        <div class="owioo-item "><img src="img/letter-w.png" alt="letter-w.png"></div>
+        <div class="owioo-item  white"></div>
+        <div class="owioo-item "><img src="img/letter-i.png" alt="letter-w.png"></div>
+        <div class="owioo-item  white"></div>
+        <div class="owioo-item "><img src="img/letter-o.png" alt="letter-o.png"></div>
+        <div class="owioo-item  white"></div>
+        <div class="owioo-item "><img src="img/letter-o.png" alt="letter-o.png"></div>
+    </div>
+    <header class="header">
+        <div class="logo">
+            <span class="square"></span>
+            <span class="triangle"></span>
+            <span class="circle"></span>
+        </div>
+        <div class="off-screen-menu" id="off-screen-menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SEVICES</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar">
+            <a href="#" >HOME</a>
+            <a href="#" id="services">SEVICES<i class='bx bxs-down-arrow' ></i></a>
+            <a href="#">PROJECTS</a>
+            <a href="#">ABOUT</a>
+            <a href="#">Contact Us<i class='bx bxs-right-top-arrow-circle' ></i></a>
+            <div class="service-menu" id="service-menu">
+                <ul>
+                    <li><div class="service-item border"> Data Engineering<i class='bx bxs-right-arrow'></i></div></li>
+                    <li><div class="service-item border">ML Engineering<i class='bx bxs-right-arrow'></i></div></li>
+                    <li><div class="service-item">Data Analytics<i class='bx bxs-right-arrow'></i></div></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Data and <br> ML Engineering</h1>
+            <p>We build robust and versatile data & ML platforms in the Cloud</p>
+            <div class="btn-box" id="btn-box">
+                <a href="#">Contact us <i class='bx bxs-right-top-arrow-circle'></i></a>
+                <a href="#">Learn more <i class='bx bxs-right-top-arrow-circle'></i></a>
+            </div>
+        </div>
+        <div class="grid-container" id="grid-container">
+        <!--    <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading" id="circle"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading" id="gray-circle"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading" id="bottom-left-round"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item letter-d letter"><img src="img/letter-d.png" alt="letter-d"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item letter-t letter"><img src="img/letter-t.png" alt="letter-a"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item letter-a letter"><img src="img/letter-a.png" alt="letter-t"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item letter-a2 letter"><img src="img/letter-a.png" alt="letter-a"></div>
+            <div class="grid-item fade-out fading" id="top-right-round"></div>
+            <div class="grid-item fade-out fading" id="top-left-round"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item fade-out fading" id="green-round"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item fade-out fading" id="bottom-right-round"></div>-->
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading target-letter" id="target-d"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading target-letter" id="target-a"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading target-letter" id="target-t"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading target-letter" id="target-a2"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item fade-out fading"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item no-transition"></div>
+            <div class="grid-item fade-out fading"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="main-pains">
+            <div class="bullet"></div>
+            <p>THE MAIN PAINS</p>
+        </div>
+        <h2>Our Challenges</h2>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
