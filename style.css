@@ -234,6 +234,7 @@ img {
     font-family: var(--encode-sans);
     font-weight: 500;
     transition: .3s ease;
+    visibility: hidden;
     z-index: 30;
 }
 
@@ -243,6 +244,7 @@ img {
 
 .off-screen-menu.active {
     right: 0;
+    visibility: visible;
 }
 
 .off-screen-menu a:hover {
