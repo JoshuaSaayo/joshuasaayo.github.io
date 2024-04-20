@@ -14,7 +14,7 @@ const targetA = document.getElementById("target-a");
 const targetT = document.getElementById("target-t");
 const targetA2 = document.getElementById("target-a2");
 const targetLetter = document.querySelectorAll(".target-letter");
-//const letter = document.querySelectorAll(".letter");
+const letters = document.querySelectorAll(".letter");
 const fading = document.querySelectorAll(".fading");
 
 menuToggle.addEventListener("click", () => {
@@ -39,6 +39,13 @@ services.addEventListener("click", () => {
 
 window.addEventListener('load', () => {
   setTimeout(() => {
+  let accurateSetY = 46
+    if (window.matchMedia('(max-width: 800px)').matches) {
+      accurateSetY = -1; // New value for smaller screens
+    } else {
+      accurateSetY = 46; // Default value for larger screens
+    }
+
   const targetDItem = targetD; // Example: You want to move the element to item3
   const targetDRect = targetDItem.getBoundingClientRect();
   const elementDRect = letterD.getBoundingClientRect();
@@ -52,26 +59,38 @@ window.addEventListener('load', () => {
   const targetA2Rect = targetA2Item.getBoundingClientRect();
   const elementA2Rect = letterA2.getBoundingClientRect();
 
-  const offsetDX = targetDRect.left - elementDRect.left - 46;
-  const offsetDY = targetDRect.top - elementDRect.top - 46;
-  const offsetAX = targetARect.left - elementARect.left - 46;
-  const offsetAY = targetARect.top - elementARect.top - 46;
-  const offsetTX = targetTRect.left - elementTRect.left - 46;
-  const offsetTY = targetTRect.top - elementTRect.top - 46;
-  const offsetA2X = targetA2Rect.left - elementA2Rect.left - 46;
-  const offsetA2Y = targetA2Rect.top - elementA2Rect.top - 46;
+  const offsetDX = targetDRect.left - elementDRect.left - accurateSetY;
+  const offsetDY = targetDRect.top - elementDRect.top - accurateSetY;
+  const offsetAX = targetARect.left - elementARect.left - accurateSetY;
+  const offsetAY = targetARect.top - elementARect.top - accurateSetY;
+  const offsetTX = targetTRect.left - elementTRect.left - accurateSetY;
+  const offsetTY = targetTRect.top - elementTRect.top - accurateSetY;
+  const offsetA2X = targetA2Rect.left - elementA2Rect.left - accurateSetY;
+  const offsetA2Y = targetA2Rect.top - elementA2Rect.top - accurateSetY;
 
-  console.log(offsetDY)
+  const targetWidth = targetD.offsetWidth;
+  const targetHeight = targetD.offsetHeight;
+
+  const elementRect = letterD.getBoundingClientRect();
+  const elementWidth = elementRect.width;
+  const elementHeight = elementRect.height;
+
+  const scaleX = targetWidth / elementWidth;
+  const scaleY = targetHeight / elementHeight;
+
   letterD.style.transition = 'transform 0.5s ease-in-out';
-  letterD.style.transform = `translate(${offsetDX}px, ${offsetDY}px) scale(0.56)`;
+  letterD.style.transform = `translate(${offsetDX}px, ${offsetDY}px) scale(${scaleX}, ${scaleY})`;
   letterA.style.transition = 'transform 0.5s ease-in-out';
-  letterA.style.transform = `translate(${offsetAX}px, ${offsetAY}px) scale(0.56)`;
+  letterA.style.transform = `translate(${offsetAX}px, ${offsetAY}px) scale(${scaleX}, ${scaleY})`;
   letterT.style.transition = 'transform 0.5s ease-in-out';
-  letterT.style.transform = `translate(${offsetTX}px, ${offsetTY}px) scale(0.56)`;
+  letterT.style.transform = `translate(${offsetTX}px, ${offsetTY}px) scale(${scaleX}, ${scaleY})`;
   letterA2.style.transition = 'transform 0.5s ease-in-out';
-  letterA2.style.transform = `translate(${offsetA2X}px, ${offsetA2Y}px) scale(0.56)`;
+  letterA2.style.transform = `translate(${offsetA2X}px, ${offsetA2Y}px) scale(${scaleX}, ${scaleY})`;
   }, 4000);
 });
+
+
+
 
 window.addEventListener("load", function() {
     setTimeout(function() {
