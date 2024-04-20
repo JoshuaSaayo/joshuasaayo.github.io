@@ -454,6 +454,11 @@ img {
     animation: noTransition 1s linear 4s forwards;
 }
 
+.target-letter{
+    visibility: hidden;
+    animation: hiddenVisible 0.5s linear 4.5s forwards;
+}
+
 .grid-item:nth-child(5) {
     background-color: var(--shape-color2);
     animation: circle 12s infinite;
@@ -743,56 +748,15 @@ footer h2 {
     }
 }
 
-/*@keyframes letterD {
-    from {
-        background-color: var(--shape-color1);
-        height: 207px;
-        width: 207px;
-        transform: translateX(-570%);
-    } to {
-        background-color: var(--shape-color2);
-        height: 116px;
-        width: 116px;
-        transform: translateX(0);
+@keyframes hiddenVisible {
+    0% {
+        visibility: hidden;
+    } 90% {
+        visibility: hidden;
+    } 100% {
+        visibility: visible;
     }
 }
-
-@keyframes letterA {
-    from {
-        height: 207px;
-        width: 207px;
-        transform: translate(-432%, -100%);
-    } to {
-        height: 116px;
-        width: 116px;
-        transform: translateX(0);
-    }
-}
-
-@keyframes letterT {
-    from {
-        height: 207px;
-        width: 207px;
-        transform: translate(-287.5%);
-    } to {
-        background-color: var(--shape-color2);
-        height: 116px;
-        width: 116px;
-        transform: translateX(0);
-    }
-}
-
-@keyframes letterA2 {
-    from {
-        height: 207px;
-        width: 207px;
-        transform: translate(-145%, -100%);;
-    } to {
-        height: 116px;
-        width: 116px;
-        transform: translateX(0);
-    }
-}*/
 
 @keyframes imgFade {
     0% {
@@ -972,10 +936,3 @@ footer h2 {
         transform: rotate(0);
     }
 }
-
-
-
-
-
-
-
