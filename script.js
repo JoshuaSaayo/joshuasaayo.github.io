@@ -1,104 +1,114 @@
+const home = document.querySelectorAll("#home");
+const about = document.querySelectorAll("#about");
+const contact = document.querySelectorAll("#contact");
+const education = document.querySelectorAll("#education");
+
+const btnBox = document.getElementById("btn-box");
+const logo = document.getElementById("logo");
 const offScreenMenu = document.getElementById("off-screen-menu");
 const menuToggle = document.getElementById("menu-toggle");
-const serviceMenu = document.getElementById("service-menu");
-const services = document.getElementById("services");
-const preloader = document.getElementById("preloader");
-const stripes = document.getElementById("stripes");
-const preloadItem = document.getElementById("preload-item");
-const letterD = document.getElementById("letter-d");
-const letterA = document.getElementById("letter-a");
-const letterT = document.getElementById("letter-t");
-const letterA2 = document.getElementById("letter-a2");
-const targetD = document.getElementById("target-d");
-const targetA = document.getElementById("target-a");
-const targetT = document.getElementById("target-t");
-const targetA2 = document.getElementById("target-a2");
-const targetLetter = document.querySelectorAll(".target-letter");
-const letters = document.querySelectorAll(".letter");
-const fading = document.querySelectorAll(".fading");
+const homeContent = document.getElementById("home-content");
+const hireMe = document.getElementById("hire-me");
+const letsTalk = document.getElementById("lets-talk");
+
+const containers = [{
+        header: "Hi, I'm Joshua Saayo",
+        details: "Front-end Developer",
+        paragraph: "Welcome to my portfolio I'm Joshua Saayo, a hardworking, Team Leader, Responsible and serious in taking tasks. Check out my projects to learn more about my capabilities as a web developer.",
+        buttonDisplay: "flex"
+    },
+    {
+        header: "About Me",
+        details: "My Technical Skills",
+        paragraph: "• Fundamental knowledge in Computer Hardware Diagnostics and Troubleshooting. <br>• Software Developing using Python. <br>Web designing using CSS, JavaScript, Bootstrap jQuery. <br>• Web development using HTML and PHP with basic knowledge on Laravel.",
+        buttonDisplay: "none"
+        
+    },
+    {
+        header: "Contacts",
+        details: "Let's work together!",
+        paragraph: "Mobile Number: +639595224816 <br> Email: saayojoshua@gmail.com",
+        buttonDisplay: "none"
+    },
+    {
+        header: "Education",
+        details: "My education attainment",
+        paragraph: "Graduated in 4 years with a degree of Bachelor of Science in Computer Science 2021-2022",
+        buttonDisplay: "none"
+    }
+];
+
+
+console.log(containers[1])
+const createContainerHTML = (container) => {
+    return `
+            <h1>${container.header}</h1>
+            <h3>${container.details}</h3>
+            <p>${container.paragraph}</p>
+            <div class="btn-box" id="btn-box" style="display: ${container.buttonDisplay};">
+                <a href="mailto:saayojoshua@gmail.com" id="hire-me">Hire me</a>
+                <a href="#" id="lets-talk">Let's talk</a>
+            </div>
+        </div>
+    `;
+}
+
+const updateContainer = (index) => {
+    const container = containers[index];
+    const containerHTML = createContainerHTML(container);
+    homeContent.innerHTML = containerHTML;
+}
 
 menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle('active');
     offScreenMenu.classList.toggle('active');
 });
 
-services.addEventListener("click", () => {
-  serviceMenu.classList.toggle('active');
+// Options for the observer (which mutations to observe)
+const config = { 
+    attributes: true, 
+    childList: true, 
+    subtree: true 
+};
+
+// Callback function to execute when mutations are observed
+const clearScreen = () => {
+    // Handle the mutations
+    offScreenMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+    console.log('DOM has been updated');
+};
+
+// Create an observer instance linked to the callback function
+const observer = new MutationObserver(clearScreen);
+
+// Start observing the target node for configured mutations
+observer.observe(homeContent, config);
+
+
+
+home.forEach((e) => {
+    e.addEventListener("click", () => {
+        updateContainer(0)
+    })
 });
 
-//const resizeObserver = new ResizeObserver(entries => {
-//  for (let entry of entries) {
-//    const width = entry.contentRect.width;
-//    letter.forEach((letters) => {
-//        letters.style.width = `${width}px`;
-//    })
-//  }
-//});
+about.forEach((e) => {
+    e.addEventListener("click", () => {
+        updateContainer(0)
+    })
+});
 
-//resizeObserver.observe(stripes);
+contact.forEach((e) => {
+    e.addEventListener("click", () => {
+        updateContainer(0)
+    })
+});
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-  let accurateSetY = 46
-    if (window.matchMedia('(max-width: 800px)').matches) {
-      accurateSetY = -1; // New value for smaller screens
-    } else {
-      accurateSetY = 46; // Default value for larger screens
-    }
-
-  const targetDItem = targetD; // Example: You want to move the element to item3
-  const targetDRect = targetDItem.getBoundingClientRect();
-  const elementDRect = letterD.getBoundingClientRect();
-  const targetAItem = targetA;
-  const targetARect = targetAItem.getBoundingClientRect();
-  const elementARect = letterA.getBoundingClientRect();
-  const targetTItem = targetT;
-  const targetTRect = targetTItem.getBoundingClientRect();
-  const elementTRect = letterT.getBoundingClientRect();
-  const targetA2Item = targetA2;
-  const targetA2Rect = targetA2Item.getBoundingClientRect();
-  const elementA2Rect = letterA2.getBoundingClientRect();
-
-  const offsetDX = targetDRect.left - elementDRect.left - accurateSetY;
-  const offsetDY = targetDRect.top - elementDRect.top - accurateSetY;
-  const offsetAX = targetARect.left - elementARect.left - accurateSetY;
-  const offsetAY = targetARect.top - elementARect.top - accurateSetY;
-  const offsetTX = targetTRect.left - elementTRect.left - accurateSetY;
-  const offsetTY = targetTRect.top - elementTRect.top - accurateSetY;
-  const offsetA2X = targetA2Rect.left - elementA2Rect.left - accurateSetY;
-  const offsetA2Y = targetA2Rect.top - elementA2Rect.top - accurateSetY;
-
-  const targetWidth = targetD.offsetWidth;
-  const targetHeight = targetD.offsetHeight;
-
-  const elementRect = letterD.getBoundingClientRect();
-  const elementWidth = elementRect.width;
-  const elementHeight = elementRect.height;
-
-  const scaleX = targetWidth / elementWidth;
-  const scaleY = targetHeight / elementHeight;
-
-  letterD.style.transition = 'transform 0.5s ease-in-out';
-  letterD.style.transform = `translate(${offsetDX}px, ${offsetDY}px) scale(${scaleX}, ${scaleY})`;
-  letterA.style.transition = 'transform 0.5s ease-in-out';
-  letterA.style.transform = `translate(${offsetAX}px, ${offsetAY}px) scale(${scaleX}, ${scaleY})`;
-  letterT.style.transition = 'transform 0.5s ease-in-out';
-  letterT.style.transform = `translate(${offsetTX}px, ${offsetTY}px) scale(${scaleX}, ${scaleY})`;
-  letterA2.style.transition = 'transform 0.5s ease-in-out';
-  letterA2.style.transform = `translate(${offsetA2X}px, ${offsetA2Y}px) scale(${scaleX}, ${scaleY})`;
-  }, 4000);
+education.forEach((e) => {
+    e.addEventListener("click", () => {
+        updateContainer(0)
+    })
 });
 
 
-
-
-window.addEventListener("load", function() {
-    setTimeout(function() {
-
-      fading.forEach((fadeOut) => {
-        fadeOut.classList.add("fade-in");
-        fadeOut.classList.remove("fade-out");
-      });
-
-  }, 4000); // 4000 milliseconds = 4 seconds
-});
