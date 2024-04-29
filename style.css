@@ -135,7 +135,7 @@ body {
     height: 100vh;
     width: 100%;
     max-width: 450px;
-    background-color: white;
+    background-color: var(--background-color);
     position: fixed;
     top: 0;
     right: -450px;
@@ -150,19 +150,19 @@ body {
     font-weight: 500;
     transition: .3s ease;
     z-index: 30;
+    border-left: 3px solid var(--font-color1);
 }
 
 .off-screen-menu ul {
     list-style-type: none;
 }
 
-.off-screen-menu li {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
 .off-screen-menu.active {
     right: 0;
+}
+
+.off-screen-menu a{
+    color: white;
 }
 
 .home {
