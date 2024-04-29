@@ -2,60 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Data and ML Engineering</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="preload" id="preload">
-        <div class="opening-stripes" >
-            <div class="stripes blue"></div>
-            <div class="stripes green" id="stripes"></div>
-            <div class="stripes blue"></div>
-            <div class="stripes green"></div>
-            <div class="stripes blue"></div>
-            <div class="stripes green"></div>
-            <div class="stripes blue"></div>
-            <div class="stripes green"></div>
-            <div class="stripes blue"></div>
-        </div>
-    </div>
-    <div class="preload-grid-data ">
-        <div class="data-item white"></div>
-        <div class="data-item letter" id="letter-d"><img src="img/letter-d.png" alt="letter-d.png"></div>
-        <div class="data-item white"></div>
-        <div class="data-item letter" id="letter-a"><img src="img/letter-a.png" alt="letter-a.png"></div>
-        <div class="data-item white"></div>
-        <div class="data-item letter" id="letter-t"><img src="img/letter-t.png" alt="letter-t.png"></div>
-        <div class="data-item white"></div>
-        <div class="data-item letter" id="letter-a2"><img src="img/letter-a.png" alt="letter-a.png"></div>
-        <div class="data-item white"></div>
-    </div>
-    <div class="preload-grid-owioo fade-in">
-        <div class="owioo-item "><img src="img/letter-o.png" alt="letter-o.png"></div>
-        <div class="owioo-item  white"></div>
-        <div class="owioo-item "><img src="img/letter-w.png" alt="letter-w.png"></div>
-        <div class="owioo-item  white"></div>
-        <div class="owioo-item "><img src="img/letter-i.png" alt="letter-w.png"></div>
-        <div class="owioo-item  white"></div>
-        <div class="owioo-item "><img src="img/letter-o.png" alt="letter-o.png"></div>
-        <div class="owioo-item  white"></div>
-        <div class="owioo-item "><img src="img/letter-o.png" alt="letter-o.png"></div>
-    </div>
     <header class="header">
-        <div class="logo">
-            <span class="square"></span>
-            <span class="triangle"></span>
-            <span class="circle"></span>
-        </div>
         <div class="off-screen-menu" id="off-screen-menu">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SEVICES</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="about">About</a></li>
+                <li><a href="#" id="contact">Contact</a></li>
+                <li><a href="#" id="education">Education</a></li>
             </ul>
         </div>
         <div class="menu-toggle" id="menu-toggle">
@@ -63,100 +22,132 @@
             <span></span>
             <span></span>
         </div>
+        <a href="#" class="logo" id="logo">js<a>
         <nav class="navbar">
-            <a href="#" >HOME</a>
-            <a href="#" id="services">SEVICES<i class='bx bxs-down-arrow' ></i></a>
-            <a href="#">PROJECTS</a>
-            <a href="#">ABOUT</a>
-            <a href="#">Contact Us<i class='bx bxs-right-top-arrow-circle' ></i></a>
-            <div class="service-menu" id="service-menu">
-                <ul>
-                    <li><div class="service-item border"> Data Engineering<i class='bx bxs-right-arrow'></i></div></li>
-                    <li><div class="service-item border">ML Engineering<i class='bx bxs-right-arrow'></i></div></li>
-                    <li><div class="service-item">Data Analytics<i class='bx bxs-right-arrow'></i></div></li>
-                </ul>
-            </div>
+            <a href="#" id="home-nav">Home</a>
+            <a href="#" id="about-nav">About</a>
+            <a href="#" id="contact-nav">Contact</a>
+            <a href="#" id="education-nav">Education</a>
         </nav>
+        
     </header>
     <section class="home">
-        <div class="home-content">
-            <h1>Data and <br> ML Engineering</h1>
-            <p>We build robust and versatile data & ML platforms in the Cloud</p>
+        <div class="home-content" id="home-content">
+            <h1>Hi, I'm Joshua Saayo</h1>
+            <h3>Front-end Developer</h3>
+            <p>
+                Welcome to my portfolio, I'm Joshua Saayo, 
+                an aspiring web developer. Check out my projects to learn more 
+                about my capabilities as a web developer.
+            </p>
             <div class="btn-box" id="btn-box">
-                <a href="#">Contact us <i class='bx bxs-right-top-arrow-circle'></i></a>
-                <a href="#">Learn more <i class='bx bxs-right-top-arrow-circle'></i></a>
+                <a href="mailto:saayojoshua@gmail.com" id="hire-me">Hire me</a>
+                <a href="#" id="lets-talk">Let's talk</a>
             </div>
         </div>
-        <div class="grid-container" id="grid-container">
-        <!--    <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading" id="circle"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading" id="gray-circle"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading" id="bottom-left-round"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item letter-d letter"><img src="img/letter-d.png" alt="letter-d"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item letter-t letter"><img src="img/letter-t.png" alt="letter-a"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item letter-a letter"><img src="img/letter-a.png" alt="letter-t"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item letter-a2 letter"><img src="img/letter-a.png" alt="letter-a"></div>
-            <div class="grid-item fade-out fading" id="top-right-round"></div>
-            <div class="grid-item fade-out fading" id="top-left-round"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item fade-out fading" id="green-round"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item fade-out fading" id="bottom-right-round"></div>-->
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item target-letter" id="target-d"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item target-letter" id="target-a"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item  target-letter" id="target-t"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item target-letter" id="target-a2"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item fade-out fading"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item no-transition"></div>
-            <div class="grid-item fade-out fading"></div>
+        <div class="home-sci">
+            <a href="https://www.facebook.com/saayo.joshua" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://twitter.com/StevenAlfonsBoA" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/joshua-saayo-54364924a/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
         </div>
     </section>
-    <footer>
-        <div class="main-pains">
-            <div class="bullet"></div>
-            <p>THE MAIN PAINS</p>
-        </div>
-        <h2>Our Challenges</h2>
-    </footer>
-    
+    <section class="projects">
+        <h1>List of Projects</h1>
+            <div class="palindrome-checker">
+                <h3>Palindrome Checker</h3>
+                <p>
+                    A basic javaScript palindrome, 
+                    a word or phrase that can be read the same way forwards and backwards, 
+                    ignoring punctuation, case, and spacing.
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="https://codepen.io/JoshuaSaayo/pen/rNbLqGy" target="_blank">Visit Site</a>
+            </div>
+            <div class="roman-numerals-converter">
+                <h3>Roman Numerals Converter</h3>
+                <p>
+                    Roman numerals are based on seven symbols and can be written using various combinations to represent Arabic numerals. 
+                    With JavaScript, I make this site converter to convert Arabic numerals to Roman numerals.
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="https://codepen.io/JoshuaSaayo/pen/NWmrOXW" target="_blank">Visit Site</a>
+            </div>
+            <div class="tel-no-validator">
+                <h3>Tel no Validator</h3>
+                <p>
+                    Simple JavaScript for verifying telephone numbers through regex. 
+                    In the US, phone numbers can be formatted in many ways.
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="https://codepen.io/JoshuaSaayo/pen/YzMQJyb" target="_blank">Visit Site</a>
+            </div>
+            <div class="service-section">
+                <h3>Services | Pleasanton Real Estate</h3>
+                <p>
+                    A service site for showcasing the services that a company provided. 
+                    It contains information for the company how their services works and more details 
+                    for encouraging a customers to buy their products.
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="#">Visit Site</a>
+            </div>
+            <div class="pokemon-search">
+                <h3>Pokemon Search App | fCC</h3>
+                <p>
+                    A very UI friendly search app for searching Pokemon details, stats and etc using JavaScript.
+                    Data and images provided by <a href="https://pokeapi-proxy.freecodecamp.rocks" target="_blank">freeCodeCamp</a>
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="https://codepen.io/JoshuaSaayo/pen/MWRGYzX" target="_blank">Visit Site</a>
+            </div>
+            <div class="empty-sekai">
+                <h3>Empty Sekai</h3>
+                <p>
+                    Similar to Wiki fandom, this site contains information, events and cards of each characters 
+                    on Project Sekai.
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="https://github.com/JoshuaSaayo/Websites/tree/main/empty_sekai" target="_blank">Visit Site</a>
+            </div>
+            <div class="data-and-ml-engineering">
+                <h3>Data and ML Engineering</h3>
+                <p>
+                    Home section for Data and ML Engineering. They build robust and versatile data & ML platforms in the Cloud
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <a href="https://codepen.io/JoshuaSaayo/pen/JjVwveX" target="_blank">Visit Site</a>
+            </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
